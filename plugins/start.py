@@ -10,7 +10,7 @@ async def start(client, message):
         [InlineKeyboardButton(
             "Report Bugs 😊", url="https://t.me/fligher")]
     ])
-    welcomed = f"Hey <b>{message.from_user.first_name} i am YouTube Video Downloader Bot\nSimply Send a Youtube Link to me</b>\n/help for More info"
+    welcomed = f"Hey <b>{message.from_user.first_name}\nI am YouTube Video Downloader Bot\nSimply Send a Youtube Link to me</b>\n/help for More info"
     await message.reply_photo(photo="https://th.bing.com/th/id/OIG4.kIKwAP6q4rN21rOhb71Z?pid=ImgGn",caption=welcomed, reply_markup=joinButton)
     raise StopPropagation
     
