@@ -11,7 +11,7 @@ async def start(client, message):
             "Report Bugs 😊", url="https://t.me/fligher")]
     ])
     welcomed = f"Hey <b>{message.from_user.first_name}</b>\n/help for More info"
-    await message.reply_text(welcomed, reply_markup=joinButton)
+    await message.reply_photo(photo="",caption=welcomed, reply_markup=joinButton)
     raise StopPropagation
     
 @Client.on_message(filters.command(["about"]), group=-2)
@@ -28,7 +28,7 @@ async def about(client, message):
 <b>✯ Uᴘᴅᴀᴛᴇs : <a href=https://t.me/movie_time_botonly>TrumBots Updates 👾</a></b>
 
 <b>✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs : ᴠ2.0.62 [Sᴛᴀʙʟᴇ]</b>"""
-    x=await message.reply_text(abouttxt, reply_markup=joinButton)
+    x=await message.reply_text(photo="",caption=abouttxt, reply_markup=joinButton)
     await asyncio.sleep(8)  # Wait for 5 seconds before deleting the message
     await x.delete()
     raise StopPropagation
