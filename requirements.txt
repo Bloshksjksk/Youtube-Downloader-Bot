@@ -2,5 +2,5 @@
 TgCrypto
 asyncio
 pyrogram
-tabulate=0.8
+tabulate==0.8
 git+https://github.com/ytdl-org/youtube-dl
