@@ -20,7 +20,7 @@ async def ytdl(_, message):
         pass
 
     url = message.text.strip()
-    await message.reply_text("<<PLEASE WAIT>>")
+    await message.reply_text("<<PLEASE WAIT>>",quote=True)
     try:
         title, thumbnail_url, formats = extractYt(url)
 
