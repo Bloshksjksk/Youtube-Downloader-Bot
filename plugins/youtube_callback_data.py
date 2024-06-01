@@ -13,10 +13,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton,InputMedia
 async def catch_youtube_fmtid(c, m):
     cb_data = m.data
     if cb_data.startswith("ytdata||"):
-        yturl = cb_data.split("||")[-1]
-        format_id = cb_data.split("||")[-2]
-        media_type = cb_data.split("||")[-3].strip()
+        cb_data = cb_data.split("||")
+        yturl = cb_data[-1]
+        format_id = cb_data[-2]
+        media_type = cb_data[-3].strip()
         print(media_type)
+        callback_data = f"{media_type}{format_id}{yturl}"
         if media_type == 'audio':
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
                 "Audio", callback_data=f"{media_type}{format_id}{yturl}"), InlineKeyboardButton("Document",
