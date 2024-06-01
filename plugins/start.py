@@ -10,8 +10,8 @@ async def start(client, message):
         [InlineKeyboardButton(
             "Report Bugs 😊", url="https://t.me/fligher")]
     ])
-    welcomed = f"Hey <b>{message.from_user.first_name}</b>\n/help for More info"
-    await message.reply_photo(photo="",caption=welcomed, reply_markup=joinButton)
+    welcomed = f"Hey <b>{message.from_user.first_name} i am YouTube Video Downloader Bot\nSimply Send a Youtube Link to me</b>\n/help for More info"
+    await message.reply_photo(photo="https://th.bing.com/th/id/OIG4.kIKwAP6q4rN21rOhb71Z?pid=ImgGn",caption=welcomed, reply_markup=joinButton)
     raise StopPropagation
     
 @Client.on_message(filters.command(["about"]), group=-2)
@@ -28,7 +28,7 @@ async def about(client, message):
 <b>✯ Uᴘᴅᴀᴛᴇs : <a href=https://t.me/movie_time_botonly>TrumBots Updates 👾</a></b>
 
 <b>✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs : ᴠ2.0.62 [Sᴛᴀʙʟᴇ]</b>"""
-    x=await message.reply_text(photo="",caption=abouttxt, reply_markup=joinButton)
+    x=await message.reply_text(photo="https://th.bing.com/th/id/OIG4.kIKwAP6q4rN21rOhb71Z?pid=ImgGn",caption=abouttxt, reply_markup=joinButton)
     await asyncio.sleep(8)  # Wait for 5 seconds before deleting the message
     await x.delete()
     raise StopPropagation
