@@ -1,5 +1,5 @@
-from pyrogram import Client, filters, StopPropagation, InlineKeyboardButton, InlineKeyboardMarkup
-
+from pyrogram import Client, filters, StopPropagation
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(Filters.command(["start"]), group=-2)
 async def start(client, message):
