@@ -8,7 +8,7 @@ from helper.ytdlfunc import extractYt, create_buttons
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
 
 
-@Client.on_message(Filters.regex(ytregex))
+@Client.on_message(filters.regex(ytregex))
 async def ytdl(_, message):
     userLastDownloadTime = user_time.get(message.chat.id)
     try:
